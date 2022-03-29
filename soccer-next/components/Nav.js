@@ -9,6 +9,7 @@ export default function Nav(){
                 <li className={styles.li}> <Link href="/bmi">Bmi</Link></li>
                 <li className={styles.li}> <Link href="/calc">Calc</Link></li>
                 <li className={styles.li}> <Link href="/grade">Grade</Link></li>
+                <li className={styles.li}> <Link href="/todoList">TodoList</Link></li>
             </ul>
         </nav>
     );

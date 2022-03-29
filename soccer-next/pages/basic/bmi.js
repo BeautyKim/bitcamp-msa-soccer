@@ -7,7 +7,7 @@ export default function Bmi(){
 
      const handleChange=(e)=>{
         e.preventDefault()
-         const{value, name} = e.target;
+    
          setInputs({
              ...inputs, [name]: value
          })
@@ -15,7 +15,6 @@ export default function Bmi(){
 
         const handleClick = (e)=>{
             e.preventDefault()
-            const bmiRequest = {name, weight, height}
 
         }
         
