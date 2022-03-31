@@ -1,5 +1,9 @@
 import axios from "axios";
 import React, { useCallback } from 'react';
+import { Nav } from "common";
+import Link from "next/link";
+import Head from "next/head";
+import styles from "common/style/Nav.module.css";
 
 const Button = ({ onClick }) => (
   <button onClick={onClick}>현재 시간</button>
@@ -13,8 +17,17 @@ export default function Home() {
       document.getElementById("timeZone").innerHTML = '<h1>현재시간: '+data.now+'<h1>'
     });
   });
-  return (<>
-    <h1>HOME</h1>
+  return (
+    <>
+    <Head>
+    <title>HOME</title>
+    </Head>
+    <h1 className="title">
+      Home{' '}
+      <Link href="game/game-list.js">
+      <a>목록</a>
+      </Link>
+    </h1>
     <Button onClick={onClick} />
     <div id="timeZone"></div>
     </>
