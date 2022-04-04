@@ -14,7 +14,7 @@ module.exports = function(app){
   })
   //next();
   app.get("", ()=>{})
-  app.post("", ()=>{})
+  
   app.update("", ()=>{})
   app.delete("", ()=>{})
 }

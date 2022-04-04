@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
     <Head>
-    <title>HOME</title>
+    <title>비트캠프 HOME</title>
     </Head>
     <h1 className="title">
       Home{' '}
