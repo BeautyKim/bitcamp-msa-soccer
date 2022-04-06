@@ -5,15 +5,15 @@ import { useState } from "react"
 
 export default function BoardhtmlForm(){
     const [inputs, setInputs] = useState({})
-    const {passengerId, name, team, teamId, subject} = inputs
+    const {passengerId, name, teamId, subject} = inputs
     
     const handleSubmit = e => {
         e.preventDefault()
-        const request = {passengerId, name, team, teamId, subject}
+        const request = {passengerId, name, teamId, subject}
         alert(`데이터셋 출력 : ${JSON.stringify(request)}`)
         axios.post('http://localhost:5000/api/board/write', inputs)
         .then(res=>{
-            alert(JSON.stringify(res.data))
+            alert(JSON.stringify(res.data.result))
         })
         .catch(err => alert(err))
     }
@@ -54,7 +54,7 @@ export default function BoardhtmlForm(){
             <label htmlFor="team">응원팀</label>
             </div>
             <div className={style.col75}>
-            <select id="teamId" name="teamId">
+            <select id="teamId" name="teamId" onChange={handleChange}>
                 <option value="">응원팀 선택</option>
                 <option value="K09">Fc seoul</option>
                 <option value="K02">Suwon Samseong blue wings</option>
